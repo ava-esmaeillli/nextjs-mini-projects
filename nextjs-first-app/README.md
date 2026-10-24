@@ -6,10 +6,6 @@ A simple and responsive e-commerce website built with Next.js and React. This pr
 
 **[View Live Demo](https://ava-esmaeillli.github.io/nextjs-mini-projects/)**
 
-## 📂 Repository
-
-[View Source Code on GitHub](https://github.com/ava-esmaeillli/nextjs-mini-projects/tree/main/nextjs-first-app)
-
 ## ✨ Features
 
 - Responsive e-commerce user interface
@@ -88,11 +84,3 @@ Through this project, I practiced:
 - Configuring Next.js for static export
 - Using Git and GitHub to manage project changes
 - Deploying a website with GitHub Pages and GitHub Actions
-
-**Ava Esmaeili**
-
-- GitHub: [@ava-esmaeillli](https://github.com/ava-esmaeillli)
-
----
-
-⭐ If you like this project, feel free to explore the source code!
