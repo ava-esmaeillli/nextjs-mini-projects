@@ -26,7 +26,7 @@ export default function Footer({navItems}) {
   return (
     <footer className="w-full max-w-[1920px] bg-white text-secondary px-4 py-4 sm:px-8 lg:px-16 lg:py-5 mx-auto">
       {/* Main */}
-      <div className="mx-auto max-w-6xl px-6 py-12 md:py-16 lg:px-8">
+      <div>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:gap-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">

@@ -74,6 +74,7 @@ export default function ProductSlider({
   const [animate, setAnimate] = useState(true);
   const [paused, setPaused] = useState(false);
   const trackRef = useRef(null);
+  const basePath = "/nextjs-mini-projects";
 
   const slides = canSlide
     ? [...products, ...products.slice(0, perView)]
@@ -150,7 +151,7 @@ export default function ProductSlider({
                   <div className="relative w-full max-h-75 aspect-[4/4.4] min-[481px]:aspect-3/4 overflow-hidden rounded border-2 border-muted">
                     {item.image ? (
                       <img
-                        src={item.image}
+                        src={`${basePath}${item.image}`}
                         alt={item.name}
                         loading="lazy"
                         draggable="false"
