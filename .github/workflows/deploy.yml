@@ -19,11 +19,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: nextjs-first-app
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -36,9 +31,11 @@ jobs:
           cache-dependency-path: nextjs-first-app/package-lock.json
 
       - name: Install dependencies
+        working-directory: nextjs-first-app
         run: npm ci
 
       - name: Build website
+        working-directory: nextjs-first-app
         run: npm run build
         env:
           GITHUB_PAGES: "true"
@@ -54,7 +51,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
