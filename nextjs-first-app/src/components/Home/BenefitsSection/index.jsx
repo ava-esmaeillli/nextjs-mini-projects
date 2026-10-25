@@ -1,10 +1,10 @@
 import { LuShoppingCart, LuAward, LuTag, LuShieldCheck } from "react-icons/lu";
 
 const Benefits = [
-    {id: 1, title: "FREE DELIVERY", text: "Consectetur adipi elit lorem ipsum dolor sit amet.", icon: LuShoppingCart},
-    {id: 2, title: "QUALITY GUARANTEE", text: "Dolor sit amet orem ipsu mcons ectetur adipi elit.", icon: LuAward},
-    {id: 3, title: "DAILY OFFERS", text: "Amet consectetur adipi elit loreme ipsum dolor sit.", icon: LuTag},
-    {id: 4, title: "100% SECURE PAYMENT", text: "Rem Lopsum dolor sit amet, consectetur adipi elit.", icon: LuShieldCheck},
+    {id: 1, title: "ارسال رایگان", text: "سفارشت رو مستقیم می‌رسونیم دم در خونه‌ات.", icon: LuShoppingCart},
+    {id: 2, title: "تضمین کیفیت", text: "همه‌ی کالاها اصل و با ضمانت‌ان، خیالت راحت.", icon: LuAward},
+    {id: 3, title: "پیشنهادهای روزانه", text: "هر روز یه پیشنهاد خوب و تازه برات داریم.", icon: LuTag},
+    {id: 4, title: "پرداخت ۱۰۰٪ امن", text: "با خیال راحت پرداخت کن، همه‌چی امنه.", icon: LuShieldCheck},
 ]
 
 const BenefitsSection = () => {
@@ -18,7 +18,7 @@ const BenefitsSection = () => {
                         <Icon size={32} className="text-primary" />
                         <div className="flex flex-col gap-1">
                             <h3 className="text-black font-bold text-md md:text-lg">{item.title}</h3>
-                            <p className="text-md text-text-secondary">{item.text}</p>
+                            <p className="text-md text-text-secondary font-light">{item.text}</p>
                         </div>
                     </div>
                 )

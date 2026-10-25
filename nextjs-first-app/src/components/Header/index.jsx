@@ -38,7 +38,7 @@ const Header = ({navItems}) => {
     <header className="relative z-50 flex w-full max-w-[1920px] items-center justify-between px-4 py-4 sm:px-8 lg:px-16 lg:py-5 mx-auto">
       {/* Logo */}
       <a href="#" className="text-2xl text-secondary">
-        MiniStore
+        مینی‌استور
         <span className="text-4xl text-primary">.</span>
       </a>
 

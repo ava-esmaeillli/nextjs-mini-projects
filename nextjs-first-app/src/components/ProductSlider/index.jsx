@@ -120,7 +120,7 @@ export default function ProductSlider({
   return (
     <section
       className="w-full overflow-hidden text-secondary px-4 py-4 sm:px-8 lg:px-16 lg:py-5"
-      dir="ltr"
+      dir="rtl"
       aria-roledescription="carousel"
       aria-label="Products"
       onMouseEnter={() => setPaused(true)}
@@ -136,7 +136,7 @@ export default function ProductSlider({
               ? "transition-transform duration-500 motion-reduce:transition-none"
               : ""
           }`}
-          style={{ transform: `translateX(-${(index * 100) / perView}%)` }}
+          style={{ transform: `translateX(${(index * 100) / perView}%)` }}
           onTransitionEnd={handleTransitionEnd}
         >
           {slides.map((item, i) => {
@@ -180,16 +180,16 @@ export default function ProductSlider({
                     focus-visible:outline-2 focus-visible:-outline-offset-4
                     [@media(hover:none)]:translate-y-0 [@media(hover:none)]:opacity-100 [@media(hover:none)]:py-2.75"
                     >
-                      ADD TO CART
+                      بنداز تو سبد
                     </Button>
                   </div>
 
-                  <div className="flex items-baseline justify-between gap-3 pt-3 text-md">
+                  <div className="flex flex-col justify-between gap-3 pt-3 text-md">
                     <span className="tracking-[.02em] motion-reduce:transition-none">
                       {item.name}
                     </span>
                     <span className="text-md tabular-nums text-primary">
-                      ${item.price}
+                      {item.price.toLocaleString("en-US")} تومان
                     </span>
                   </div>
                 </div>

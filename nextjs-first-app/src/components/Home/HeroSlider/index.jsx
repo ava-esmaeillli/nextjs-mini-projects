@@ -3,26 +3,26 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Button from "../../Button";
-import { LuArrowRight } from "react-icons/lu";
+import { LuArrowLeft } from "react-icons/lu";
 import { getImagePath } from "@/lib/imagePath";
 
 const Slides = [
   {
-    title: "YOUR PRODUCTS ARE GREAT.",
+    title: "بهترین‌ها اینجاست، مخصوص تو",
     href: "/shop",
     image: "/image/heroSlider_1.webp",
     alt: "Mobile",
     bg: "bg-[#adb5d3]",
   },
   {
-    title: "DESIGNED TO MOVE WITH YOU.",
+    title: "عملکردی قدرتمند و طراحی متفاوت",
     href: "/shop",
     image: "/image/heroSlider_2.png",
     alt: "Smart watch",
     bg: "bg-[#d3d3d3]",
   },
   {
-    title: "EVERY SECOND COUNTS.",
+    title: "هر ثانیه‌ات رو خاص کن",
     href: "/shop",
     image: "/image/heroSlider_3.png",
     alt: "Smart watch",
@@ -62,7 +62,6 @@ export default function HeroSlider({ slides = Slides, interval = 3000 }) {
 
   return (
     <section
-      dir="ltr"
       className="relative w-full max-w-[1920px] overflow-hidden rounded-lg mx-auto"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -73,7 +72,7 @@ export default function HeroSlider({ slides = Slides, interval = 3000 }) {
       {/* Slide */}
       <div
         className="flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${current * 100}%)` }}
+        style={{ transform: `translateX(${current * 100}%)` }}
       >
         {slides.map((slide, i) => (
           <div
@@ -82,15 +81,15 @@ export default function HeroSlider({ slides = Slides, interval = 3000 }) {
             aria-hidden={i !== current}
           >
             {/* Text */}
-            <div className="flex flex-col items-center md:items-start gap-5">
-              <h2 className="max-w-[18ch] text-3xl font-light leading-tight tracking-wide text-neutral-800 md:text-4xl lg:text-5xl">
+            <div className="flex flex-col items-center md:items-start  text-center md:text-start gap-5">
+              <h2 className="max-w-[18ch] text-3xl font-light leading-tight tracking-wide md:text-4xl lg:text-5xl">
                 {slide.title}
               </h2>
-              <Button icon={LuArrowRight} iconPosition="right">
+              <Button icon={LuArrowLeft} iconPosition="right">
               <a
                 href={slide.href}
                 tabIndex={i === current ? 0 : -1}              >
-                SHOP NOW
+                مشاهده و خرید
               </a>
               </Button>
             </div>

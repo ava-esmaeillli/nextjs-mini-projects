@@ -1,8 +1,37 @@
 @import "tailwindcss";
 
-@theme{
+
+@theme {
   --color-primary: #6FB9D6;
   --color-secondary: #171717;
   --color-text-secondary: #777777;
   --color-muted: #E8E8E8;
+}
+
+@font-face {
+  font-family: "Vazir FD";
+  src: url("/fonts/Vazir-Light-FD-WOL.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazir FD";
+  src: url("/fonts/Vazir-Medium-FD-WOL.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazir FD";
+  src: url("/fonts/Vazir-Bold-FD-WOL.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  font-family: "Vazir FD", sans-serif;
+  font-weight: normal;
 }
