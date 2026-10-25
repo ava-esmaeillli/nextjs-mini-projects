@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Button from "../../Button";
 import { LuArrowRight } from "react-icons/lu";
+import { getImagePath } from "@/lib/imagePath";
 
 const Slides = [
   {
@@ -97,7 +98,7 @@ export default function HeroSlider({ slides = Slides, interval = 3000 }) {
             {/* Image */}
             <div className="flex w-full justify-center md:h-full md:w-auto md:justify-end">
               <Image
-                src={slide.image}
+                src={getImagePath(slide.image)}
                 alt={slide.alt || ""}
                 width={420}
                 height={420}

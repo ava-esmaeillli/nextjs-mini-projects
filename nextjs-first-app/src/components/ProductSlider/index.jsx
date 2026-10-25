@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { LuShoppingCart } from "react-icons/lu";
 import Button from "../Button";
+import { getImagePath } from "@/lib/imagePath";
 
 const DEFAULT_BREAKPOINTS = [
   [1024, 4],
@@ -74,7 +75,7 @@ export default function ProductSlider({
   const [animate, setAnimate] = useState(true);
   const [paused, setPaused] = useState(false);
   const trackRef = useRef(null);
-  const basePath = "/nextjs-mini-projects";
+
 
   const slides = canSlide
     ? [...products, ...products.slice(0, perView)]
@@ -151,7 +152,7 @@ export default function ProductSlider({
                   <div className="relative w-full max-h-75 aspect-[4/4.4] min-[481px]:aspect-3/4 overflow-hidden rounded border-2 border-muted">
                     {item.image ? (
                       <img
-                        src={`${basePath}${item.image}`}
+                        src={getImagePath(item.image)}
                         alt={item.name}
                         loading="lazy"
                         draggable="false"
@@ -166,20 +167,20 @@ export default function ProductSlider({
                       </div>
                     )}
 
-                    <Button 
-                    icon={LuShoppingCart} 
-                    iconPosition="right"
-                    iconSize="20px"
-                    tabIndex={isClone ? -1 : 0}
-                    onClick={() => onAddToCart(item)}
-                    className="group/btn absolute inset-x-0 bottom-0 tracking-[.06em] 
+                    <Button
+                      icon={LuShoppingCart}
+                      iconPosition="right"
+                      iconSize="20px"
+                      tabIndex={isClone ? -1 : 0}
+                      onClick={() => onAddToCart(item)}
+                      className="group/btn absolute inset-x-0 bottom-0 tracking-[.06em] 
                     transition-[transform,opacity,background-color] motion-reduce:transition-none
                     translate-y-[101%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100
                     focus-visible:translate-y-0 focus-visible:opacity-100
                     focus-visible:outline-2 focus-visible:-outline-offset-4
                     [@media(hover:none)]:translate-y-0 [@media(hover:none)]:opacity-100 [@media(hover:none)]:py-2.75"
                     >
-                        ADD TO CART
+                      ADD TO CART
                     </Button>
                   </div>
 

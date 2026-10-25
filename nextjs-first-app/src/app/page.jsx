@@ -31,12 +31,16 @@ const HomePage = () => {
     return (
         <>
         <HeroSlider interval={5000} />
+
         <BenefitsSection />
+
         <section className="w-full max-w-[1920px] flex flex-col gap-3 mx-auto my-18">
             <HeadingSection title="MOBILE PRODUCTS" action="GO TO SHOP" />
             <ProductSlider products={mobileProducts} onAddToCart={(p) => console.log(p)} />
         </section>
+
         <SaleSection title= "10% OFF" titr= "NEW YEAR SALE" btnText= "SHOP NOW" img="/image/sale_1.png" bgColor="#EEF2F5" />
+        
         <section className="w-full max-w-[1920px] flex flex-col gap-3 mx-auto my-18">
             <HeadingSection title="SMART WATCHES" action="GO TO SHOP" />
             <ProductSlider products={smartWatchesProducts} onAddToCart={(p) => console.log(p)} />
